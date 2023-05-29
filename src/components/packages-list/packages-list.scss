@@ -1,0 +1,31 @@
+@use 'styles/mixins';
+@use 'styles/variables' as var;
+
+.packages-list {
+  margin-top: 65px;
+
+  @media (max-width: var.$media-tablet) {
+    margin-top: 40px;
+  }
+
+  &__info {
+    @include mixins.placeItems(center, first baseline);
+    column-gap: 18px;
+
+    width: max-content;
+    margin-bottom: 85px;
+
+    @media (max-width: var.$media-tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    @include mixins.fontTitle();
+  }
+
+  &__amount {
+    @include mixins.fontSubtitle();
+    font-weight: var.$font-weight-medium;
+  }
+}

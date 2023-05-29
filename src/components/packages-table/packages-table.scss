@@ -1,0 +1,52 @@
+@use "styles/mixins";
+@use "styles/variables" as var;
+
+.packages-table {
+  overflow: auto;
+  padding: 20px;
+  max-height: 350px;
+
+  @include mixins.scrollBar();
+
+  &__container {
+    @include mixins.tableSet();
+
+    padding-right: 10px;
+  }
+
+  &__head-row {
+    @include mixins.fontSubtitle();
+
+    th {
+      text-align: start;
+      width: var.$width-table-data;
+
+      @media (max-width: var.$media-tablet) {
+        min-width: var.$width-table-data-tablet;
+        max-width: var.$width-table-data-tablet;
+      }
+    }
+  }
+
+  &__status {
+    @include mixins.placeItems(space-between, center);
+  }
+
+  &__add-button {
+    padding: 0 8px;
+
+    @include mixins.fontTitle();
+    font-size: var.$font-size-4;
+    color: var.$color-text;
+
+    border: 2px solid var.$color-text;
+    border-radius: 5px;
+
+    transition: all var.$transition-main;
+
+    &:hover {
+      color: var.$color-white;
+      background-color: var.$color-text;
+    }
+  }
+}

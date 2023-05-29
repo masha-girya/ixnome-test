@@ -1,0 +1,16 @@
+@use 'styles/variables' as var;
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: var.$color-background;
+
+  &__box {
+    display: flex;
+    min-height: 100%;
+
+    @media (max-width: var.$media-tablet) {
+      display: block;;
+    }
+  }
+}

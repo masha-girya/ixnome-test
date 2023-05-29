@@ -1,0 +1,17 @@
+@use 'styles/mixins';
+@use 'styles/variables' as var;
+
+.sidebar {
+  padding: 32px 11px;
+  background-color: var.$color-sidebar;
+
+  @media (max-width: var.$media-tablet) {
+    padding: 11px;
+  }
+
+  &__box {
+    @media (max-width: var.$media-tablet) {
+      @include mixins.placeItems(center, center);
+    }
+  }
+}

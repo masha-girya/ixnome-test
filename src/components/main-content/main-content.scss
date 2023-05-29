@@ -1,0 +1,30 @@
+@use 'styles/variables' as var;
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: max-content;
+  padding-bottom: 40px;
+
+  background-color: var.$color-background;
+
+  @media (max-width: var.$media-tablet) {
+    width: 100%;
+  }
+
+  &__box {
+    padding: 50px 120px;
+
+    @media (max-width: var.$media-laptop) {
+      padding: 50px 60px;
+    }
+
+    @media (max-width: var.$media-tablet) {
+      padding: 30px;
+    }
+  }
+}

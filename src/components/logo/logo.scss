@@ -1,0 +1,30 @@
+@use "styles/mixins";
+@use "styles/variables" as var;
+
+.logo {
+  &__circle {
+    @include mixins.placeItems(center, center);
+    flex-direction: column;
+
+    @include mixins.square(77px);
+    border-radius: 50%;
+
+    background: var.$color-white;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06),
+      0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+    @media (max-width: var.$media-mobile) {
+      @include mixins.square(44px);
+    }
+  }
+
+  &__text {
+    display: block;
+    @include mixins.fontLogo();
+
+    @media (max-width: var.$media-mobile) {
+      font-size: var.$font-size-main;
+      line-height: var.$font-size-main;
+    }
+  }
+}

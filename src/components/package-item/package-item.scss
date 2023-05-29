@@ -1,0 +1,73 @@
+@use "styles/mixins";
+@use "styles/variables" as var;
+
+.package-item {
+  position: relative;
+
+  height: 90px;
+  border-radius: 10px;
+
+  @include mixins.fontText();
+
+  &__status {
+    width: max-content;
+    padding: 6px 13px;
+
+    border-radius: 30px;
+
+    color: var.$color-status;
+    background-color: #73e46066;
+
+    transition: color var.$transition-main;
+
+    &::before {
+      content: "";
+      display: inline-block;
+
+      margin-right: 7px;
+
+      @include mixins.square(10px);
+
+      border-radius: 50%;
+      background-color: var.$color-status;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    z-index: var.$index-hover;
+
+    width: 102%;
+    height: 100%;
+    border-radius: 5px;
+
+    background-color: var.$color-hover;
+    opacity: 0;
+
+    transition: opacity var.$transition-main;
+  }
+
+  td {
+    position: relative;
+    z-index: var.$index-table;
+
+    border-bottom: 1px solid var.$color-border;
+
+    transition: all var.$transition-main;
+
+    &:first-of-type {
+      color: var.$color-id;
+    }
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover .package-item__status,
+  &:hover td:first-of-type {
+    color: var.$color-white;
+  }
+}
