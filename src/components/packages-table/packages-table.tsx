@@ -13,7 +13,7 @@ export const PackagesTable = () => {
 
   return (
     <>
-      <div className="packages-table">
+      <div className="packages-table" id="scroll">
         <table className="packages-table__container">
           <thead>
             <tr className="packages-table__head-row">
