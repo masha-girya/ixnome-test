@@ -8,12 +8,12 @@ import './packages-table.scss';
 
 export const PackagesTable = () => {
   const {
-    isOnAdd, packages, packagesOnShow, handleOpenAdd,
+    isOnAdd, packages, packagesOnShow, elementScroll, handleOpenAdd,
   } = usePackagesTable();
 
   return (
     <>
-      <div className="packages-table" id="scroll">
+      <div className="packages-table" ref={elementScroll}>
         <table className="packages-table__container">
           <thead>
             <tr className="packages-table__head-row">
