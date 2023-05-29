@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ixnome-test/static/css/main.2c69fdda.css",
-    "main.js": "/ixnome-test/static/js/main.6e16abf1.js",
+    "main.css": "/ixnome-test/static/css/main.59ae7eb4.css",
+    "main.js": "/ixnome-test/static/js/main.5b74796f.js",
     "static/media/Roboto-Medium.ttf": "/ixnome-test/static/media/Roboto-Medium.2699aefade440f0e338f.ttf",
     "static/media/Roboto-Regular.ttf": "/ixnome-test/static/media/Roboto-Regular.160d7a6ac26376e5e977.ttf",
     "static/media/Roboto-Bold.ttf": "/ixnome-test/static/media/Roboto-Bold.35eab922fdbe4b5324d4.ttf",
     "static/media/loupe.svg": "/ixnome-test/static/media/loupe.190b3ff019091c9cec952132b994212d.svg",
     "index.html": "/ixnome-test/index.html",
-    "main.2c69fdda.css.map": "/ixnome-test/static/css/main.2c69fdda.css.map",
-    "main.6e16abf1.js.map": "/ixnome-test/static/js/main.6e16abf1.js.map"
+    "main.59ae7eb4.css.map": "/ixnome-test/static/css/main.59ae7eb4.css.map",
+    "main.5b74796f.js.map": "/ixnome-test/static/js/main.5b74796f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c69fdda.css",
-    "static/js/main.6e16abf1.js"
+    "static/css/main.59ae7eb4.css",
+    "static/js/main.5b74796f.js"
   ]
 }
