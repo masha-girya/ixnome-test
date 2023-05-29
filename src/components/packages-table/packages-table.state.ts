@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppSelector } from 'store';
 
 export const usePackagesTable = () => {
@@ -8,6 +8,14 @@ export const usePackagesTable = () => {
   const handleOpenAdd = () => {
     setIsOnAdd(!isOnAdd);
   };
+
+  useEffect(() => {
+    const elementScroll = document.getElementById('scroll');
+
+    if (packages.length === 0 && elementScroll) {
+      elementScroll.scrollLeft += 500;
+    }
+  }, []);
 
   return {
     isOnAdd, packages, packagesOnShow, handleOpenAdd,
